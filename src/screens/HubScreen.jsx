@@ -77,6 +77,7 @@ const HubScreen = () => {
      showsVerticalScrollIndicator={false}
      data={hubData}
      renderItem={({item}) => <RenderItem data={item}/>} 
+     keyExtractor={item => item.id}
      />
     </View>
     </>

@@ -1,24 +1,40 @@
 /* eslint-disable prettier/prettier */
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Image, Text, View } from 'react-native'
 import { HEIGHT, WIDTH } from '../constants/dimension'
+import { backarrow } from '../assets';
 
-const Navbar = ({heading}) => {
+const Navbar = ({heading, bgColor}) => {
   return (
     <View
       style={{
-        height: HEIGHT * 0.1,
+        height: HEIGHT * 0.08,
         width: WIDTH,
         borderBottomWidth: 1,
-        borderColor: '#DBDBDB'
+        borderColor: '#DBDBDB',
+        backgroundColor: bgColor ? bgColor : '#FFFFFF',
       }}>
       <View
         style={{
-          height: HEIGHT * 0.12,
+          // borderWidth:1,
+          height: HEIGHT * 0.09,
           justifyContent: 'center',
           alignItems: 'center',
+          flexDirection: 'row',
         }}>
-        <Text style={{fontSize: HEIGHT * 0.03, fontWeight: 300, color:'#000000'}}>{heading}</Text>
+          {/* <Image
+          style={{
+            height: HEIGHT*0.08,
+            width: WIDTH*0.04
+          }}
+          source={backarrow} 
+          /> */}
+        <Text style={{
+          fontSize: HEIGHT * 0.03, 
+          fontWeight: 400, 
+          color: bgColor ? '#FFFFFF' : '#000000',
+          letterSpacing: WIDTH*0.004
+          }}>{heading}</Text>
       </View>
     </View>
   );

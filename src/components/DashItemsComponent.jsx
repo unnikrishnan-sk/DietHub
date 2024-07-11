@@ -5,7 +5,7 @@
 import React, { useState } from 'react'
 import {FlatList, Image, Text, View} from 'react-native';
 import { HEIGHT, WIDTH } from '../constants/dimension';
-import { dashData } from '../constants/dummyData';
+import { dashData, dashDateWise, dietData } from '../constants/dummyData';
 import { SceneMap, TabView } from 'react-native-tab-view';
 import CustomTabBar from './CustomTabBar';
 import { edit_icon } from '../assets';
@@ -66,95 +66,153 @@ const RenderItem = ({data}) => {
     )
 }
 
-const DashItemsComponent = () => {
+const RenderDashData = ({data}) => {
 
-    const [index, setIndex] = useState(0);
-    const [routes] = useState([{ key: 'first', title: 'First' },{ key: 'second', title: 'Second' },{ key: 'third', title: 'Third' }]);
-
-    const FirstRoute = () => (
-        <>
-        <View style={{
+    const { id, name } = data;
+    return(
+<>
+    <View style={{
+        // borderWidth:1,
+        // justifyContent: 'center',
+        // alignItems: 'center',
+        marginLeft: WIDTH*0.05,
+        alignSelf: 'center',
+        borderRadius: HEIGHT*0.01,
+        backgroundColor: '#FFFFFF',
+        height: HEIGHT*0.45,
+        width: WIDTH*0.75,
+        marginTop: HEIGHT*0.01,
+        }}>
+           <FlatList
+           showsVerticalScrollIndicator={false}
+           data={dashData}
+           renderItem={({item}) => <RenderItem data={item}/>}
+           keyExtractor={item => item.id}
+           />
+           <View style={{
             // borderWidth:1,
-            // justifyContent: 'center',
-            // alignItems: 'center',
+            justifyContent: 'space-between',
+            width:WIDTH*0.75,
             alignSelf: 'center',
-            borderRadius: HEIGHT*0.01,
-            backgroundColor: '#FFFFFF',
-            height: HEIGHT*0.4,
-            width: WIDTH*0.75,
-            marginTop: HEIGHT*0.03,
-            }}>
-               <FlatList
-               showsVerticalScrollIndicator={false}
-               data={dashData}
-               renderItem={({item}) => <RenderItem data={item}/>}
-               keyExtractor={item => item.id}
-               />
-            </View>
+            height: HEIGHT*0.06,
+            flexDirection: 'row',
+            backgroundColor: '#e3e3e3',
+            borderBottomLeftRadius: HEIGHT*0.01,
+            borderBottomRightRadius: HEIGHT*0.01
+            // paddingHorizontal: WIDTH*0.03
+        }}>
+            <Image
+            style={{
+                height: HEIGHT*0.02,
+                width: WIDTH*0.038,
+                alignSelf: 'center',
+                marginLeft: WIDTH*0.04
+                // tintColor: 'grey'
+            }}
+            source={edit_icon}
+            />
+            <Text style={{
+                fontSize: HEIGHT*0.018,
+                alignSelf: 'center',
+            }}>Add Comments to Coach</Text>
             <View style={{
                 // borderWidth:1,
-                justifyContent: 'space-between',
-                width:WIDTH*0.75,
-                alignSelf: 'center',
-                height: HEIGHT*0.06,
-                flexDirection: 'row',
-            }}>
-                <Image
-                style={{
-                    height: HEIGHT*0.03,
-                    width: WIDTH*0.06,
-                    alignSelf: 'center',
-                    // tintColor: 'grey'
-                }}
-                source={edit_icon}
-                />
-                <Text style={{
-                    fontSize: HEIGHT*0.018,
-                    alignSelf: 'center',
-                }}>Add Comments to Coach</Text>
-                <View style={{
-                    // borderWidth:1,
-                    width: WIDTH*0.25,
-                    backgroundColor: '#b9b9b9',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                }}><Text style={{
-                    color: '#FFFFFF',
-                    fontSize: HEIGHT*0.027,
-                }}>390 Cal.</Text></View>
-            </View>
-            </>
-      );
-    //   const SecondRoute = () => (
-    //     <View style={{ flex: 1, backgroundColor: '#673ab7' }} />
-    //   );
+                width: WIDTH*0.25,
+                backgroundColor: '#b9b9b9',
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderBottomRightRadius: HEIGHT*0.01,
+            }}><Text style={{
+                color: '#FFFFFF',
+                fontSize: HEIGHT*0.027,
+            }}>390 Cal.</Text></View>
+        </View>
+        </View>
+        {/* <View style={{
+            // borderWidth:1,
+            height: HEIGHT*0.03,
+            marginTop: HEIGHT*0.008,
+            alignItems: 'center',
+            justifyContent: 'center'
+        }}> */}
+            {/* <View style={{
+                borderWidth:1,
+                height: HEIGHT*0.02,
+                width: HEIGHT*0.02,
+                borderRadius: HEIGHT*0.01
+            }}></View> */}
+        {/* </View> */}
+        {/* </View> */}
+        </>
+    )
+}
 
-    const renderScene = SceneMap({
-        first: FirstRoute,
-        second: FirstRoute,
-        third: FirstRoute,
-      });
+const Pagination = ({index}) => {
+    return(
+        <View style={{
+            flexDirection: 'row'
+        }}>
+            {
+                dashDateWise.map((_,i)=>{
+                    return(
+                        <View
+                        key={i}
+                        >
+                            {index === i ? (
+                                 <View style={{
+                                    borderWidth:2,
+                                    borderColor: '#b9b9b9',
+                                    backgroundColor: '#b9b9b9',
+                                    height: HEIGHT*0.016,
+                                    width: HEIGHT*0.016,
+                                    borderRadius: HEIGHT*0.01,
+                                    marginTop: HEIGHT*0.02,
+                                    marginBottom: HEIGHT*0.02,
+                                    marginLeft: WIDTH*0.01
+
+                                }}></View>
+                            ) : (
+                                <View style={{
+                                    borderWidth:2,
+                                    borderColor: '#b9b9b9',
+                                    height: HEIGHT*0.016,
+                                    width: HEIGHT*0.016,
+                                    borderRadius: HEIGHT*0.01,
+                                    marginTop: HEIGHT*0.02,
+                                    marginBottom: HEIGHT*0.02,
+                                    marginLeft: WIDTH*0.01
+                                }}></View>
+                            )}
+                        </View>
+                    )})
+            }
+        </View>
+    )
+}
+
+const DashItemsComponent = ({index, onScroll, flatListRefer}) => {
 
   return (
     <View>
         <View style={{
             // borderWidth:1,
-            height: HEIGHT*0.6,
+            height: HEIGHT*0.55,
+            // paddingHorizontal: WIDTH*0.05,
             backgroundColor: '#f6f6f6',
             // justifyContent: 'center',
             // marginTop: HEIGHT*0.03,
             alignItems: 'center',
         }}>
-            <TabView style={{
-                flex:1,
-                width:WIDTH,
-                // borderWidth: 1,
-                // justifyContent: 'center'
-                // alignItems: 'center',
-                }}
-                tabBarPosition='bottom'
-                renderTabBar={(props)=><CustomTabBar {...props} radius={HEIGHT*0.15}  detail='detail' />} 
-                navigationState={{ index, routes }} renderScene={renderScene} onIndexChange={setIndex} lazyPreloadDistance={4} initialLayout={{ width: WIDTH }}/>
+            <FlatList
+            showsHorizontalScrollIndicator={false}
+            data={dashDateWise}
+            horizontal
+            renderItem={({item}) => <RenderDashData data={item}/>}
+           keyExtractor={item => item.id}
+        //    ref={flatListRefer}
+           onScroll={onScroll}
+            />     
+        <Pagination index={index} />
         </View>
     </View>
   )

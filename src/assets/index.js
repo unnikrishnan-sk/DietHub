@@ -23,5 +23,21 @@ import run_icon from './run_icon/run_icon.png';
 import cycling_icon from './cycling_icon/cycling_icon.png'
 import swimming_icon from './swimming_icon/swimming_icon.png'
 
+// guideline screen
 
-export { hub1, timer, hub2, hub3, hub4, hub5, hubdetail, rightarrow, backarrow, backarrow_grey, forwardarrow_grey, popcorn_dummy, edit_icon, down_arrow, walk_icon, run_icon, cycling_icon, swimming_icon }
+import guideline_image from './guideline_image/guideline_image.png'
+import play_button from './play_button/play_button.png'
+
+//select coach screen
+
+import dana_jaber from './dana_jaber/dana_jaber.png'
+import jumanah from './jumanah/jumanah.png'
+import fatmah from './fatmah/fatmah.png'
+import dana from './dana/dana.png'
+import yasmeen from './yasmeen/yasmeen.png'
+import kholoud from './kholoud/kholoud.png'
+import star from './star/star.png'
+import star_grey from './star_grey/star_grey.png'
+
+
+export { hub1, timer, hub2, hub3, hub4, hub5, hubdetail, rightarrow, backarrow, backarrow_grey, forwardarrow_grey, popcorn_dummy, edit_icon, down_arrow, walk_icon, run_icon, cycling_icon, swimming_icon, guideline_image, play_button, dana_jaber, jumanah, fatmah, dana, yasmeen, kholoud, star, star_grey }
