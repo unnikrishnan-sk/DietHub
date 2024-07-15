@@ -49,5 +49,17 @@ import closeIcon from './closeIcon/closeIcon.png'
 import backIcon_white from './backIcon_white/backIcon_white.png'
 import tickIcon_subscription from './tickIcon_subcsription/tickIcon_subcsription.png'
 
+// subscription details screen
 
-export { hub1, timer, hub2, hub3, hub4, hub5, hubdetail, rightarrow, backarrow, backarrow_grey, forwardarrow_grey, popcorn_dummy, edit_icon, down_arrow, walk_icon, run_icon, cycling_icon, swimming_icon, guideline_image, play_button, dana_jaber, jumanah, fatmah, dana, yasmeen, kholoud, star, star_grey, tickIcon, closeIcon, backIcon_white, tickIcon_subscription }
+import addCouponLogo from './addCouponLogo/addCouponLogo.jpeg'
+import arrowup from './arrowup/arrowup.png'
+
+// chat screen
+
+import profilePic from './profilePic/profilePic.png'
+import chatSeenLogo from './chatSeenLogo/chatSeenLogo.png'
+import playImage from './playImage/playImage.png'
+import playIcon from './playIcon/playIcon.png'
+
+
+export { hub1, timer, hub2, hub3, hub4, hub5, hubdetail, rightarrow, backarrow, backarrow_grey, forwardarrow_grey, popcorn_dummy, edit_icon, down_arrow, walk_icon, run_icon, cycling_icon, swimming_icon, guideline_image, play_button, dana_jaber, jumanah, fatmah, dana, yasmeen, kholoud, star, star_grey, tickIcon, closeIcon, backIcon_white, tickIcon_subscription, addCouponLogo, arrowup, profilePic, chatSeenLogo, playImage, playIcon }

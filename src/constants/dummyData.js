@@ -27,3 +27,7 @@ export const medicalIssues = [{ id: 0, title: "Diabetes", allowed: false }, { id
 
 export const sortBy = [{ id: 0, title: "Rating", allowed: false }]
 
+export const reviewDetails = [{ id: 0, name: "Dana Jaber", rating: "4/5", comment: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The" }, { id: 1, name: "Lama Adeeb", rating: "5/5", comment: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The" }, { id: 2, name: "Dana Jaber", rating: "4/5", comment: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The" }, { id: 3, name: "Lama Adeeb", rating: "5/5", comment: "Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Has Been The" }]
+
+export const dateDet = [{ id: 0, date: "01", month: "APR" }, { id: 1, date: "02", month: "APR" }, { id: 2, date: "03", month: "APR" }, { id: 3, date: "04", month: "APR" }, { id: 4, date: "05", month: "APR" }, { id: 5, date: "06", month: "APR" }, { id: 6, date: "07", month: "APR" }, { id: 7, date: "08", month: "APR" }, { id: 8, date: "09", month: "APR" }, { id: 9, date: "10", month: "APR" }, { id: 10, date: "11", month: "APR" }, { id: 11, date: "12", month: "APR" }, { id: 12, date: "13", month: "APR" }, { id: 13, date: "14", month: "APR" }, { id: 14, date: "15", month: "APR" }]
+

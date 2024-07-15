@@ -8,6 +8,8 @@ import SelectCoach from './screens/SelectCoach';
 import FilterScreen from './screens/FilterScreen';
 import CoachDetailScreen from './screens/CoachDetailScreen';
 import CoachSubscription from './screens/CoachSubscription';
+import SubscriptionDetailsScreen from './screens/SubscriptionDetailsScreen';
+import CoachChat from './screens/CoachChat';
 
 
 const Stack = createNativeStackNavigator();
@@ -17,7 +19,7 @@ const Router = () => {
         <>
             <NavigationContainer>
                 <Stack.Navigator
-                    initialRouteName='coachdetail'
+                    initialRouteName='chat'
                     screenOptions={{
                         headerShown: false
                     }}>
@@ -29,6 +31,8 @@ const Router = () => {
                     <Stack.Screen name="filter" component={FilterScreen} />
                     <Stack.Screen name="coachdetail" component={CoachDetailScreen} />
                     <Stack.Screen name="subscription" component={CoachSubscription} />
+                    <Stack.Screen name="subscriptionDetail" component={SubscriptionDetailsScreen} />
+                    <Stack.Screen name="chat" component={CoachChat} />
                 </Stack.Navigator>
             </NavigationContainer>
         </>
