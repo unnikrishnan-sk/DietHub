@@ -21,3 +21,9 @@ export const restrictedFoods = [{ id: 0, name: 'Fruits' }, { id: 1, name: 'Chick
 
 export const coachData = [{ id: 0, image: dana_jaber, name: 'Dana Jaber', designation: 'Nutrition Specialist', rating: 4 }, { id: 1, image: jumanah, name: 'Jumanah Abdulqader', designation: 'Nutrition Specialist', rating: 4 }, { id: 2, image: fatmah, name: 'Fatmah Mohammed', designation: 'Nutrition Specialist', rating: 4 }, { id: 3, image: dana, name: 'Dana Jaber', designation: 'Nutrition Specialist', rating: 4 }, { id: 4, image: yasmeen, name: 'Yasmeen Khalid', designation: 'Nutrition Specialist', rating: 4 }, { id: 5, image: jumanah, name: 'Dana Jaber', designation: 'Nutrition Specialist', rating: 4 }, { id: 6, image: kholoud, name: 'Kholoud Nasser', designation: 'Nutrition Specialist', rating: 4 }, { id: 7, image: dana_jaber, name: 'Dana Jaber', designation: 'Nutrition Specialist', rating: 4 }]
 
+export const dietPreferences = [{ id: 0, title: "Plant-based diet", allowed: false }, { id: 1, title: "Diet For a fitness Program", allowed: true }, { id: 2, title: "Flexible Diet", allowed: true }];
+
+export const medicalIssues = [{ id: 0, title: "Diabetes", allowed: false }, { id: 1, title: "Hypertension / Hypotension", allowed: true }, { id: 2, title: "Gastrointestinal problem", allowed: true }, { id: 3, title: "Eating Disorder", allowed: false }, { id: 4, title: "other", allowed: true }]
+
+export const sortBy = [{ id: 0, title: "Rating", allowed: false }]
+

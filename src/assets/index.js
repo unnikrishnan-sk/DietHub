@@ -28,7 +28,7 @@ import swimming_icon from './swimming_icon/swimming_icon.png'
 import guideline_image from './guideline_image/guideline_image.png'
 import play_button from './play_button/play_button.png'
 
-//select coach screen
+// select coach screen
 
 import dana_jaber from './dana_jaber/dana_jaber.png'
 import jumanah from './jumanah/jumanah.png'
@@ -39,5 +39,15 @@ import kholoud from './kholoud/kholoud.png'
 import star from './star/star.png'
 import star_grey from './star_grey/star_grey.png'
 
+// Filter screen
 
-export { hub1, timer, hub2, hub3, hub4, hub5, hubdetail, rightarrow, backarrow, backarrow_grey, forwardarrow_grey, popcorn_dummy, edit_icon, down_arrow, walk_icon, run_icon, cycling_icon, swimming_icon, guideline_image, play_button, dana_jaber, jumanah, fatmah, dana, yasmeen, kholoud, star, star_grey }
+import tickIcon from './tickIcon/tickIcon.png'
+import closeIcon from './closeIcon/closeIcon.png'
+
+// Coach detail
+
+import backIcon_white from './backIcon_white/backIcon_white.png'
+import tickIcon_subscription from './tickIcon_subcsription/tickIcon_subcsription.png'
+
+
+export { hub1, timer, hub2, hub3, hub4, hub5, hubdetail, rightarrow, backarrow, backarrow_grey, forwardarrow_grey, popcorn_dummy, edit_icon, down_arrow, walk_icon, run_icon, cycling_icon, swimming_icon, guideline_image, play_button, dana_jaber, jumanah, fatmah, dana, yasmeen, kholoud, star, star_grey, tickIcon, closeIcon, backIcon_white, tickIcon_subscription }

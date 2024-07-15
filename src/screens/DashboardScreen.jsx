@@ -22,6 +22,7 @@ const RenderDates = ({data,currentIndex}) => {
             key={id}
             style={{
                     // borderWidth: 1,
+                    // flex:1,
                     height:HEIGHT*0.08,
                     width:WIDTH*0.28,
                     alignItems: 'center',
