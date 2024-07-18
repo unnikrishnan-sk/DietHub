@@ -5,6 +5,7 @@ import { backarrow, tickIcon_subscription } from '../assets'
 import { HEIGHT, WIDTH } from '../constants/dimension'
 import { colorMix } from '../constants/color'
 import ButtonComponent from '../components/ButtonComponent'
+import { useNavigation } from '@react-navigation/native'
 
 const subcriptionDetails = [{id:0, title: "Daily access to your Diet plan", status: true}, {id:1, title:"Open Chat With Your dietitian", status: true}, {id:2, title: "Customized meal plan every", status:true},{id:3, title: "Access to Features tips & recipes on the hub", status: true}, {id:4, title: "Connect Diet hub with apple health kit and get your data sync with your coach", status: true}]
 
@@ -89,7 +90,7 @@ const Pagination = ({index}) => {
         </View>
     )}
 
-const RenderSubMonths = ({data,index}) => {
+const RenderSubMonths = ({data,index,navigation}) => {
 
     const {id, title} = data;
     console.log(index);
@@ -149,7 +150,7 @@ const RenderSubMonths = ({data,index}) => {
             <View style={{
                 paddingTop: HEIGHT*0.01,
             }}>
-            <ButtonComponent text="Subscribe now" font={HEIGHT*0.03} border={HEIGHT*0.013}/>  
+            <ButtonComponent text="Subscribe now" font={HEIGHT*0.03} border={HEIGHT*0.013} onPressHandler={()=>navigation.navigate('subscriptionDetail')}/>  
             </View>
         </View>
     )
@@ -159,6 +160,7 @@ const CoachSubscription = () => {
 
     const [index, setIndex] = useState(0);
     const flatListRef = useRef(FlatList);
+    const navigation = useNavigation();
 
     const onScroll = useCallback((event)=>{
         const slideSize = event.nativeEvent.layoutMeasurement.width;
@@ -177,7 +179,7 @@ const CoachSubscription = () => {
 
   return (
     <View>
-        <Navbar heading="Choose Plan" />
+        <Navbar leftIcon={backarrow} heading="Choose Plan" />
 
         <View style={{
             // borderWidth: 1,
@@ -191,7 +193,7 @@ const CoachSubscription = () => {
             // showsVerticalScrollIndicator={false}
             ref={flatListRef}
             pagingEnabled={true}
-            renderItem={({item}) => <RenderSubMonths data={item} index={index}/>} 
+            renderItem={({item}) => <RenderSubMonths data={item} index={index} navigation={navigation}/>} 
             onScroll={onScroll}
             keyExtractor={item => item.id}
              />

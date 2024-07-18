@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "951905310565",
+    "project_id": "diethubchat",
+    "storage_bucket": "diethubchat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951905310565:android:98ba0489adb33d93d9738c",
+        "android_client_info": {
+          "package_name": "com.diethub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqyw3a2bDBmR6MkLr-Xi1-phGsZ9yS6ZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

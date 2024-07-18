@@ -11,6 +11,7 @@ import { HEIGHT, WIDTH } from '../constants/dimension';
 import { dates, dietData } from '../constants/dummyData';
 import DashItemsComponent from '../components/DashItemsComponent';
 import DashDetComponent from '../components/DashDetComponent';
+import { useNavigation } from '@react-navigation/native';
 
 const RenderDates = ({data,currentIndex}) => {
 
@@ -61,6 +62,8 @@ const DashboardScreen = () => {
     const flatListRef = useRef(FlatList);
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    const navigation = useNavigation();
+
     const onScroll = useCallback((event)=>{
         const slideSize = event.nativeEvent.layoutMeasurement.width;
         const index = event.nativeEvent.contentOffset.x / slideSize*1.3;
@@ -102,7 +105,9 @@ const DashboardScreen = () => {
             paddingHorizontal: WIDTH*0.05,
             // backgroundColor: '#FFFFFF'
             }}>
-        <Text style={{fontSize: HEIGHT*0.023, letterSpacing:WIDTH*0.003}}>General Guidelines</Text>
+        <Text 
+        onPress={()=>navigation.navigate('guidelines')}
+        style={{fontSize: HEIGHT*0.023, letterSpacing:WIDTH*0.003}}>General Guidelines</Text>
         <Image 
         style={{
             marginLeft: WIDTH*0.04,

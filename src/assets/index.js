@@ -60,6 +60,19 @@ import profilePic from './profilePic/profilePic.png'
 import chatSeenLogo from './chatSeenLogo/chatSeenLogo.png'
 import playImage from './playImage/playImage.png'
 import playIcon from './playIcon/playIcon.png'
+import sendIcon from './sendIcon/sendIcon.webp'
+import addIcon from './addIcon/addIcon.png'
+import voiceIcon from './voiceIcon/voiceIcon.png'
+import chatBack from './chatBack/chatBack.png'
+import profile_pic_online from './profile_pic_online/profile_pic_online.png'
+
+// Tab Bottom Bar
+
+import hubIcon from './hubIcon/hubIcon.png'
+import dashboardIcon from './dashboardIcon/dashboardIcon.png'
+import coachIcon from './coachIcon/coachIcon.png'
+import trackerIcon from './trackerIcon/trackerIcon.png'
+import foodDeliveryIcon from './foodDeliveryIcon/foodDeliveryIcon.png'
 
 
-export { hub1, timer, hub2, hub3, hub4, hub5, hubdetail, rightarrow, backarrow, backarrow_grey, forwardarrow_grey, popcorn_dummy, edit_icon, down_arrow, walk_icon, run_icon, cycling_icon, swimming_icon, guideline_image, play_button, dana_jaber, jumanah, fatmah, dana, yasmeen, kholoud, star, star_grey, tickIcon, closeIcon, backIcon_white, tickIcon_subscription, addCouponLogo, arrowup, profilePic, chatSeenLogo, playImage, playIcon }
+export { hub1, timer, hub2, hub3, hub4, hub5, hubdetail, rightarrow, backarrow, backarrow_grey, forwardarrow_grey, popcorn_dummy, edit_icon, down_arrow, walk_icon, run_icon, cycling_icon, swimming_icon, guideline_image, play_button, dana_jaber, jumanah, fatmah, dana, yasmeen, kholoud, star, star_grey, tickIcon, closeIcon, backIcon_white, tickIcon_subscription, addCouponLogo, arrowup, profilePic, chatSeenLogo, playImage, playIcon, sendIcon, addIcon, voiceIcon, hubIcon, dashboardIcon, coachIcon, trackerIcon, foodDeliveryIcon, chatBack, profile_pic_online }

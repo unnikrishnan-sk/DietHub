@@ -1,11 +1,15 @@
 /* eslint-disable prettier/prettier */
 import React from 'react'
 import Navbar from '../components/Navbar'
-import { Image, ScrollView, Text, View } from 'react-native'
+import { Image, Pressable, ScrollView, Text, View } from 'react-native'
 import { hubdetail, timer } from '../assets'
 import { HEIGHT, WIDTH } from '../constants/dimension'
+import { useNavigation } from '@react-navigation/native'
 
 const HubDetailScreen = () => {
+
+  const navigation = useNavigation();
+
   return (
     <>
     <Navbar heading="The Hub"/>
@@ -59,7 +63,11 @@ const HubDetailScreen = () => {
           </View>
           </View>
     <ScrollView contentContainerStyle={{}}>
+      <Pressable
+      onPress={()=>navigation.navigate('myTabs')}
+      >
     <Text style={{marginTop: HEIGHT*0.02, fontSize: HEIGHT*0.022, lineHeight: HEIGHT*0.03, letterSpacing: WIDTH*0.002, fontWeight: 300, color:'#000000'}}>A Balanced Diet is One That Fulfills All Of A Person’s Nutritional Needs. Humans Need A Certain Amount Of Calories And Nutrients To Stay Healthy. A Balanced Diet Provides All The Nutrients A Person Requires, Without Going Over The Recommended Daily Calorie Intake.{"\n"}{"\n"} By Eating A Balanced Diet, People Can Get The Nutrients And Calories They Need And Avoid Eating Junk Food, Or Food Without Nutritional Value.{"\n"}{'\n'} The United States Department Of Agriculture (Usda) Used To Recommend Following A Food Pyramid. However, As Nutritional Science Has Changed, They Now Recommend Eating Foods From the Five Groups And Building A Balanced Plate.</Text>
+    </Pressable>
     </ScrollView>
     </View>
   

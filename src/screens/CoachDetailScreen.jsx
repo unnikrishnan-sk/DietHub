@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
-import { FlatList, Image, ScrollView, Text, View } from 'react-native'
+import { FlatList, Image, Pressable, ScrollView, Text, View } from 'react-native'
 import { HEIGHT, WIDTH } from '../constants/dimension'
 import { colorMix } from '../constants/color'
 import { backIcon_white, dana_jaber, star, star_grey } from '../assets'
 import Svg, { Path } from 'react-native-svg';
 import { dietPreferences, medicalIssues, reviewDetails } from '../constants/dummyData'
+import ButtonComponent from '../components/ButtonComponent'
+import { useNavigation } from '@react-navigation/native'
 
 const RenderReviews = ({data, contentOffset, contentSize, scrollViewHeight, scrollElementHeightPercent}) => {
 
@@ -44,7 +46,10 @@ const CoachDetailScreen = () => {
     const [scrollViewHeight,setScrollViewHeight] = useState(0);
     const scrollElementHeightPercent = 45;
 
+    const navigation = useNavigation();
+
   return (
+    <>
     <ScrollView showsVerticalScrollIndicator={false}>
     <View style={{
         // borderWidth: 1,
@@ -227,7 +232,7 @@ const CoachDetailScreen = () => {
                 }}>
                     {medicalIssues.map((item)=>(
                         <Text style={{
-                            // borderWidth:1, 
+                            borderWidth:1, 
                             borderRadius: HEIGHT*0.022,
                             padding: HEIGHT*0.01,
                             marginTop: HEIGHT*0.01,
@@ -332,6 +337,8 @@ const CoachDetailScreen = () => {
             </View>
     </View>
     </ScrollView>
+    <ButtonComponent text="Next" onPressHandler={()=>navigation.navigate('subscription')}/>
+    </>
   )
 }
 

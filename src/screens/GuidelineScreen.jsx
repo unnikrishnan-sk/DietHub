@@ -2,13 +2,13 @@ import React from 'react'
 import { Image, ScrollView, Text, View } from 'react-native'
 import Navbar from '../components/Navbar'
 import { HEIGHT, WIDTH } from '../constants/dimension'
-import { guideline_image, play_button } from '../assets'
+import { backarrow, guideline_image, play_button } from '../assets'
 import { allowedFoods, restrictedFoods } from '../constants/dummyData'
 
 const GuidelineScreen = () => {
   return (
     <View>
-        <Navbar heading="General Guidelines"/>
+        <Navbar leftIcon={backarrow} heading="General Guidelines"/>
         <ScrollView 
         style={{paddingBottom: HEIGHT*0.1}}
         showsVerticalScrollIndicator={false} >

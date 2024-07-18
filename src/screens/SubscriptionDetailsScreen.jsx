@@ -1,11 +1,12 @@
 import React from 'react'
-import { FlatList, Image, Text, View } from 'react-native'
+import { FlatList, Image, Pressable, Text, View } from 'react-native'
 import Navbar from '../components/Navbar'
 import { HEIGHT, WIDTH } from '../constants/dimension'
 import { colorMix } from '../constants/color'
 import { addCouponLogo, arrowup, backarrow } from '../assets'
 import ButtonComponent from '../components/ButtonComponent'
 import { dateDet } from '../constants/dummyData'
+import { useNavigation } from '@react-navigation/native'
 
 const RenderDates = ({data}) => {
 
@@ -40,12 +41,15 @@ const RenderDates = ({data}) => {
 }
 
 const SubscriptionDetailsScreen = () => {
+
+    const navigation = useNavigation();
+
   return (
     <View style={{
         height: HEIGHT,
         backgroundColor: colorMix.white
     }}>
-        <Navbar heading="Subscription"/>
+        <Navbar leftIcon={backarrow} heading="Subscription"/>
         <View style={{
             // borderWidth: 1,
             backgroundColor: colorMix.white,
@@ -174,7 +178,7 @@ const SubscriptionDetailsScreen = () => {
             paddingTop: HEIGHT*0.01,
             backgroundColor: colorMix.white
         }}>
-        <ButtonComponent text="ACCEPT & PAY" background={colorMix.subscribeBtncolor} weight={700}/>
+        <ButtonComponent text="ACCEPT & PAY" background={colorMix.subscribeBtncolor} weight={700} onPressHandler={()=>navigation.navigate('chat')}/>
         </View>
        
     </View>

@@ -84,14 +84,14 @@ const RenderExcerciseItem = ({data}) => {
 const DashDetComponent = () => {
   return (
     <View style={{
-        // paddingHorizontal: WIDTH*0.05,
+        paddingHorizontal: WIDTH*0.05,
         marginTop: HEIGHT*0.025,
     }}>
         <Text style={{
             fontSize: HEIGHT*0.03,
             fontWeight: 300,
             letterSpacing: WIDTH*0.005,
-            paddingHorizontal: WIDTH*0.05,
+            // paddingHorizontal: WIDTH*0.05,
             color: '#6871a8',
         }}>Water Cup</Text>
             <FlatList
@@ -106,7 +106,7 @@ const DashDetComponent = () => {
             fontWeight: 300,
             letterSpacing: WIDTH*0.005,
             marginTop: HEIGHT*0.02,
-            paddingHorizontal: WIDTH*0.05,
+            // paddingHorizontal: WIDTH*0.05,
             color: '#6871a8',
         }}>Excercises</Text>
         <FlatList

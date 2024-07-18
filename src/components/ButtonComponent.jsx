@@ -1,9 +1,9 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Pressable, Text, View } from 'react-native'
 import { HEIGHT, WIDTH } from '../constants/dimension'
 import { colorMix } from '../constants/color'
 
-const ButtonComponent = ({text, font, border, background, weight}) => {
+const ButtonComponent = ({text, font, border, background, weight, onPressHandler}) => {
   return (
     <View style={{
         backgroundColor: colorMix.white,
@@ -13,7 +13,9 @@ const ButtonComponent = ({text, font, border, background, weight}) => {
         justifyContent: 'center',
         // alignItems: 'center'
     }}>
-        <View style={{
+        <Pressable 
+        onPress={()=>onPressHandler()}
+        style={{
             // borderWidth:1,
             height:HEIGHT*0.08,
             backgroundColor: background ? background : colorMix.blue,
@@ -26,7 +28,7 @@ const ButtonComponent = ({text, font, border, background, weight}) => {
                 fontSize:font ? font : HEIGHT*0.023,
                 fontWeight: weight ? weight : 0
             }}>{text}</Text>
-        </View>
+        </Pressable>
     </View>
   )
 }

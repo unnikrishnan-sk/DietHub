@@ -15,5 +15,9 @@ export const colorMix = {
     chatShade: '#9B9B9B',
     chatReceiveBackground: '#ECEEF4',
     chatSendBackground: '#DCEBFF',
-    playBackground: '#D4D4D4'
+    playBackground: '#D4D4D4',
+    headingShade: '#F9F9F9',
+    green: '#7CD76A',
+    darkBackground: '#D1D1D1',
+    darkBorder: '#C6C6C6'
 }

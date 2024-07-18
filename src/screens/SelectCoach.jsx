@@ -1,16 +1,20 @@
 import React from 'react';
-import { FlatList, Image, Text, View } from 'react-native';
+import { FlatList, Image, Pressable, Text, View } from 'react-native';
 import Navbar from '../components/Navbar';
 import { HEIGHT, WIDTH } from '../constants/dimension';
 import { dana, star, star_grey } from '../assets';
 import { coachData } from '../constants/dummyData';
+import { useNavigation } from '@react-navigation/native';
 
 const RenderItem = ({data}) => {
 
     const { id, image, name, designation, rating} = data;
+    const navigation = useNavigation();
 
     return(
-        <View style={{
+        <Pressable 
+        onPress={()=>navigation.navigate('coachdetail')}
+        style={{
             borderBottomWidth:1,
             borderColor: '#DBDBDB',
             height: HEIGHT*0.2,
@@ -71,7 +75,7 @@ const RenderItem = ({data}) => {
             }}>{rating.toFixed(1)}</Text>
             </View>
             </View>
-           </View>
+           </Pressable>
     )
 }
 

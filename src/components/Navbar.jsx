@@ -1,11 +1,15 @@
 /* eslint-disable prettier/prettier */
 import React from 'react'
-import { Image, Text, View } from 'react-native'
+import { Image, Pressable, Text, View } from 'react-native'
 import { HEIGHT, WIDTH } from '../constants/dimension'
 import { backarrow, closeIcon, dana_jaber, star, star_grey } from '../assets';
 import { colorMix } from '../constants/color';
+import { useNavigation } from '@react-navigation/native';
 
 const Navbar = ({heading, leftIcon, rightIcon, bgColor}) => {
+
+  const navigation = useNavigation();
+
   return (
     <View
       style={{
@@ -16,7 +20,8 @@ const Navbar = ({heading, leftIcon, rightIcon, bgColor}) => {
         borderColor: '#DBDBDB',
         backgroundColor: bgColor ? bgColor : '#FFFFFF',
       }}>
-      <View
+      <Pressable
+      onPress={()=>navigation.goBack()}
         style={{
           // borderWidth:1,
           height: HEIGHT * 0.09,
@@ -49,7 +54,7 @@ const Navbar = ({heading, leftIcon, rightIcon, bgColor}) => {
               />) : (<View></View>)
           }
           
-      </View>
+      </Pressable>
 
       {heading==="Choose Plan" ? (
         <>
